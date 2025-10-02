@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-feature-settings: "liga" 1, "kern" 1;
+}
+
+html,
+body {
+  @apply h-full bg-[#050505] text-slate-100 antialiased;
+}
+
+body {
+  background-image: radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(14, 165, 233, 0.12), transparent 60%),
+    linear-gradient(180deg, rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0));
+}
+
+a {
+  @apply text-brand hover:text-brand-dark transition-colors;
+}
+
+::selection {
+  @apply bg-brand/40 text-slate-950;
+}
+
+main {
+  @apply flex flex-col gap-20 py-20;
+}
+
+section {
+  scroll-margin-top: 6rem;
+}
+
+@layer components {
+  .container-section {
+    @apply container mx-auto max-w-5xl px-4 sm:px-6;
+  }
+
+  .card-surface {
+    @apply rounded-2xl border border-slate-800/60 bg-[#101012]/90 p-6 shadow-[0_20px_60px_-35px_rgba(14,165,233,0.5)] backdrop-blur;
+  }
+
+  .text-muted {
+    @apply text-slate-400;
+  }
+}

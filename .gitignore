@@ -1,0 +1,5 @@
+d# next.js
+/.next/
+/out/
+/.idea
+node_modules

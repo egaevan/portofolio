@@ -4,12 +4,12 @@ interface ExperienceItem {
   company: string;
   role: string;
   period: string;
-  highlights?: string[];
-  stack?: string[];
+  highlights?: ReadonlyArray<string>;
+  stack?: ReadonlyArray<string>;
 }
 
 interface ExperienceTimelineProps {
-  items: ExperienceItem[];
+  items: ReadonlyArray<ExperienceItem>;
 }
 
 export function ExperienceTimeline({ items }: ExperienceTimelineProps) {

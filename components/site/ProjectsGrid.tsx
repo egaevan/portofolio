@@ -14,14 +14,14 @@ interface ProjectLink {
 interface ProjectItem {
   title: string;
   description: string;
-  tech?: string[];
+  tech?: ReadonlyArray<string>;
   links?: ProjectLink[];
   status?: string;
   category?: string;
 }
 
 interface ProjectsGridProps {
-  items: ProjectItem[];
+  items: ReadonlyArray<ProjectItem>;
 }
 
 export function ProjectsGrid({ items }: ProjectsGridProps) {

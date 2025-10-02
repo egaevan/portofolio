@@ -4,7 +4,7 @@ import { Hero } from "@/components/site/Hero";
 import { ProjectsGrid } from "@/components/site/ProjectsGrid";
 import { Section } from "@/components/site/Section";
 import { SkillsCloud } from "@/components/site/SkillsCloud";
-import { education, experience, featuredSkills, projects, skills } from "@/lib/data";
+import { education, experience, featuredSkills, projects, skillCategories, skills } from "@/lib/data";
 
 export default function HomePage() {
   return (
@@ -35,7 +35,7 @@ export default function HomePage() {
         title="Technical Toolkit"
         description="Teknologi dan praktik yang digunakan untuk membangun sistem yang reliable."
       >
-        <SkillsCloud items={skills} featured={featuredSkills} />
+        <SkillsCloud items={skills} featured={featuredSkills} categories={skillCategories} />
       </Section>
 
       <Section

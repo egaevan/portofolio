@@ -71,31 +71,43 @@ export const projects = [
     title: "Grapari Online (2024 - Present)",
     description: "Dashboard layanan Grapari yang memonitor performa pelayanan dan operasional outlet Telkomsel secara real-time.",
     tech: ["Go", "Gin", "PostgreSQL", "Redis", "Docker", "GitLab CI"],
+    status: "Live",
+    category: "Service Monitoring",
   },
   {
     title: "B2B MyEnterprise (2022 - Present)",
     description: "Platform penjualan produk korporasi Telkomsel dengan orkestrasi microservice gRPC dan workflow otomasi dokumen.",
     tech: ["Go", "gRPC", "GORM", "MongoDB", "PostgreSQL", "RabbitMQ"],
+    status: "Live",
+    category: "Enterprise Platform",
   },
   {
     title: "TelkomselDFE (2022 - 2023)",
     description: "Sistem farming berbasis teknologi untuk digital farmer Telkomsel dengan integrasi data dan notifikasi multi-channel.",
     tech: ["Go", "gRPC", "MongoDB", "PostgreSQL", "RabbitMQ"],
+    status: "Delivered",
+    category: "AgriTech",
   },
   {
     title: "tSurvey.id (2021 - 2022)",
     description: "Platform survei Telkomsel yang menangani distribusi kuesioner dan agregasi data analitik skala nasional.",
     tech: ["Go", "gRPC", "MongoDB", "PostgreSQL", "RabbitMQ"],
+    status: "Delivered",
+    category: "Survey Platform",
   },
   {
     title: "Dunia Games (2023)",
     description: "Pemeliharaan portal gaming Telkomsel mencakup sistem produk, katalog, serta reliabilitas infrastruktur.",
     tech: ["Go", "PHP", "Laravel", "MySQL", "RabbitMQ", "Docker"],
+    status: "Maintenance",
+    category: "Digital Entertainment",
   },
   {
     title: "Selena Project (2021)",
     description: "Integrasi FusionAuth untuk akses RevivalTV & RevivalPedia termasuk orkestrasi migrasi pengguna multi-platform.",
     tech: ["Go", "FusionAuth", "MySQL", "Git"],
+    status: "Completed",
+    category: "Identity & Access",
   },
 ] as const;
 
@@ -107,26 +119,23 @@ export const featuredSkills = [
   "Observability (Grafana & Prometheus)",
 ] as const;
 
-export const skills = [
-  "Golang",
-  "PHP",
-  "Node.js",
-  "Gin",
-  "Echo",
-  "gRPC",
-  "GORM",
-  "PostgreSQL",
-  "MongoDB",
-  "MySQL",
-  "Redis",
-  "RabbitMQ",
-  "Kafka",
-  "InfluxDB",
-  "Docker",
-  "GitLab CI/CD",
-  "Grafana",
-  "Prometheus",
-  "FusionAuth",
-  "Jira & Confluence",
-  "Agile Delivery",
+export const skillCategories = [
+  {
+    name: "Languages & Frameworks",
+    items: ["Golang", "PHP", "Node.js", "Gin", "Echo", "GORM"],
+  },
+  {
+    name: "Data & Messaging",
+    items: ["PostgreSQL", "MongoDB", "MySQL", "Redis", "RabbitMQ", "Kafka", "InfluxDB"],
+  },
+  {
+    name: "Platform & Ops",
+    items: ["Docker", "GitLab CI/CD", "Grafana", "Prometheus", "FusionAuth"],
+  },
+  {
+    name: "Collaboration",
+    items: ["Jira & Confluence", "Agile Delivery"],
+  },
 ] as const;
+
+export const skills = skillCategories.flatMap((category) => category.items);

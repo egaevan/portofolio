@@ -54,3 +54,42 @@ export function ArrowIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function RocketIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} {...props}>
+      <path d="M13 11c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2Z" />
+      <path d="m13 5-6 6c-1 1-1.5 2.3-1.3 3.6l.2 1.4 1.4.2c1.3.2 2.6-.3 3.6-1.3l6-6c1.6-1.6 2.4-3.7 2.2-5.8-.1-.4-.4-.7-.8-.8-2.1-.2-4.2.6-5.8 2.2Z" />
+      <path d="m5 19 1.5-1.5" />
+      <path d="m8 22 1.5-1.5" />
+      <path d="M4 4l2.5 2.5" />
+    </svg>
+  );
+}
+
+export function SparklesIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} {...props}>
+      <path d="M9 3v3m0 12v3m9-9h3M3 12H0" opacity={0.25} />
+      <path d="M9 6.5 10.8 12 9 17.5 7.2 12 9 6.5Z" />
+      <path d="M17 4.5 18.6 9 17 13.5 15.4 9 17 4.5Z" opacity={0.6} />
+    </svg>
+  );
+}
+
+export function ShieldIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} {...props}>
+      <path d="M12 21c-3.7-1.5-6.5-4.4-7-8.7V5l7-2 7 2v7.3c-.5 4.3-3.3 7.2-7 8.7Z" />
+      <path d="m9 11 2 2 4-4" />
+    </svg>
+  );
+}
+
+export function WrenchIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} {...props}>
+      <path d="M17.6 5.6a4 4 0 0 0-5.2-5.2l3 3-4.2 4.2-3-3A4 4 0 0 0 8.4 10L3 15.4c-.8.8-.8 2.1 0 2.9l2.7 2.7c.8.8 2.1.8 2.9 0L14 15.6a4 4 0 0 0 5.2-5.2l-3-3 1.4-1.4Z" />
+    </svg>
+  );
+}

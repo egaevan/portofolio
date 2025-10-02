@@ -10,16 +10,16 @@ type ButtonProps = {
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-brand text-slate-950 shadow-[0_10px_30px_-12px_rgba(56,189,248,0.8)] transition hover:bg-brand-dark focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-brand/70",
+    "bg-brand text-slate-950 shadow-[0_10px_30px_-12px_rgba(56,189,248,0.8)] hover:-translate-y-[1px] hover:bg-brand-dark focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-brand/70",
   secondary:
-    "border border-slate-700/80 bg-[#16161a] text-slate-200 shadow-sm transition hover:bg-[#1f1f25] focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-brand/40",
+    "border border-slate-700/80 bg-[#16161a] text-slate-200 shadow-sm hover:-translate-y-[1px] hover:bg-[#1f1f25] hover:text-brand focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-brand/40",
   ghost:
-    "bg-transparent text-slate-400 transition hover:text-brand focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-brand/60",
+    "bg-transparent text-slate-400 hover:text-brand focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-brand/60",
 };
 
 export const buttonVariants = (variant: ButtonVariant = "primary") =>
   cn(
-    "inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium",
+    "inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200",
     variantClasses[variant],
   );
 

@@ -20,10 +20,10 @@ export function ExperienceTimeline({ items }: ExperienceTimelineProps) {
           <span className="absolute -left-[33px] top-2 h-3 w-3 rounded-full border-2 border-[#050505] bg-brand shadow" />
           <div className="card-surface">
             <header className="flex flex-col gap-1">
-              <h3 className="text-lg font-semibold text-slate-100">
+              <h3 className="text-xl font-semibold text-slate-100 md:text-2xl">
                 {item.role} · <span className="text-brand">{item.company}</span>
               </h3>
-              <p className="text-xs uppercase tracking-[0.25em] text-muted">{item.period}</p>
+              <p className="text-xs uppercase tracking-[0.25em] text-muted md:text-[0.7rem]">{item.period}</p>
             </header>
             {item.stack?.length ? (
               <div className="mt-3 space-y-2">

@@ -25,13 +25,13 @@ export function CardHeader({ className, ...props }: CardHeaderProps) {
 export interface CardTitleProps extends React.HTMLAttributes<HTMLHeadingElement> {}
 
 export function CardTitle({ className, ...props }: CardTitleProps) {
-  return <h3 className={cn("text-lg font-semibold text-slate-100", className)} {...props} />;
+  return <h3 className={cn("text-xl font-semibold text-slate-100 md:text-2xl", className)} {...props} />;
 }
 
 export interface CardDescriptionProps extends React.HTMLAttributes<HTMLParagraphElement> {}
 
 export function CardDescription({ className, ...props }: CardDescriptionProps) {
-  return <p className={cn("text-sm text-muted", className)} {...props} />;
+  return <p className={cn("text-base leading-relaxed text-muted", className)} {...props} />;
 }
 
 export interface CardContentProps extends React.HTMLAttributes<HTMLDivElement> {}

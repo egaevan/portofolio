@@ -6,7 +6,7 @@ interface EducationItem {
 }
 
 interface EducationTimelineProps {
-  items: EducationItem[];
+  items: ReadonlyArray<EducationItem>;
 }
 
 export function EducationTimeline({ items }: EducationTimelineProps) {
